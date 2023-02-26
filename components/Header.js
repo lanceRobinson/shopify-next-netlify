@@ -1,6 +1,25 @@
 import Link from 'next/link';
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
+import { useEffect } from 'react';
+
+const url = 'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js'
+
 
 export default function Header() {
+  const searchClient = algoliasearch(process.env.NEXT_PUBLIC_ALGOLIA_APP_ID, process.env.NEXT_PUBLIC_ALGOLIA_API_KEY);
+    useEffect(() => {
+        const script = document.createElement('script');
+
+        script.src = url;
+        script.async = true;
+
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        }
+    }, [url]);
   return (
     <header className="app-header">
       <h1>
@@ -31,6 +50,10 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      {/*<InstantSearch searchClient={searchClient} >*/}
+      {/*  <SearchBox />*/}
+      {/*  <Hits />*/}
+      {/*</InstantSearch>*/}
     </header>
   );
 }

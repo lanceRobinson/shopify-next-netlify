@@ -3,3 +3,17 @@
 
 [functions]
   directory = "api/functions/"
+
+[context.production.environment]
+  SHOPIFY_STOREFRONT_API_TOKEN="b84aeba4eff382c6770e2ac5d31137e5"
+  SHOPIFY_API_ENDPOINT="https://l-i-f-e-f-i-t-n-e-s-s.myshopify.com/api/unstable/graphql.json"
+  ALGOLIA_API_KEY="cb4894b0dd752c34ce8748d79c11021686585553a65841f5e8ba26c8705e60b7"
+  ALGOLIA_BASE_URL="https://crawler.algolia.com"
+  ALGOLIA_APP_ID="PVXTT5VWPI"
+
+[context.deploy-preview.environment]
+  SHOPIFY_STOREFRONT_API_TOKEN="b84aeba4eff382c6770e2ac5d31137e5"
+  SHOPIFY_API_ENDPOINT="https://l-i-f-e-f-i-t-n-e-s-s.myshopify.com/api/unstable/graphql.json"
+  ALGOLIA_API_KEY="cb4894b0dd752c34ce8748d79c11021686585553a65841f5e8ba26c8705e60b7"
+  ALGOLIA_BASE_URL="https://crawler.algolia.com"
+  ALGOLIA_APP_ID="PVXTT5VWPI"
