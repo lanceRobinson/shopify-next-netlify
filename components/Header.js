@@ -5,7 +5,7 @@ export default function Header() {
     <header className="app-header">
       <h1>
         <Link href="/">
-          <a>Shoperoni</a>
+          <a>Life Fitness</a>
         </Link>
       </h1>
       <nav className="main-nav">
