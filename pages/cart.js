@@ -12,7 +12,6 @@ export default function CartPage() {
         <title>Shoperoni | Cart</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <SiteMenu/>
       <Header />
       <main className="cart-page">
         <article className="cart-page-content">

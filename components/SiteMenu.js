@@ -13,6 +13,7 @@ import {useAppContext} from "../state";
 import {useEffect, useState} from "react";
 import Image from 'next/image'
 import Badge from "@mui/material/Badge";
+import Script from "next/script";
 
 
 var classes = {
@@ -40,10 +41,10 @@ const MenuButtons = [
     'Tools',
 
 ]
-const MenuButton = ({name}) => {
+const MenuButton = ({name, index}) => {
     return (
-        <Link href="/">
-            <Button color="inherit" sx={classes.button}>{name}</Button>
+        <Link href="/" key={'menu-button-link-'+name}>
+            <Button color="inherit" sx={classes.button} key={'menu-button-'+name}>{name}</Button>
         </Link>
     )
 }
@@ -85,12 +86,11 @@ export default function SiteMenu() {
                         <img src="/logo.png" alt="logo" style={classes.logo}/>
                     </Link>
                     <ButtonGroup variant="text" aria-label="text button group" display="flex" color="inherit">
-                        {MenuButtons.map(button => <MenuButton name={button}/>)}
+                        {MenuButtons.map((button,index) => <MenuButton name={button} index={index}/>)}
                     </ButtonGroup>
                     <ButtonGroup variant="text" color="inherit">
-                        <Button>
                             <div id={'search'} margin={'auto'}></div>
-                        </Button>
+
                         <Button color="inherit" sx={classes.button}>Login</Button>
                         <Link href="/cart">
                             <Badge badgeContent={cartCount} color="primary">

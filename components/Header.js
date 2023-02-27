@@ -4,6 +4,7 @@ import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
 import React, { useEffect } from 'react';
 import Script from 'next/script'
 import SiteMenu from "@components/SiteMenu";
+import ButtonGroup from "@mui/material/ButtonGroup";
 
 
 
@@ -41,21 +42,23 @@ export default function Header() {
     // }, []);
   return (
     <header className="app-header">
-        <Script
-            src='https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js'
-            // strategy="beforeInteractive"
-            onLoad={() => {
-                algoliasearchNetlify({
-                    appId: 'PVXTT5VWPI',
-                    apiKey: '3a89a9c31ea536f9ed2c2034f5f899c8',
-                    siteId: '81d7b5da-7f5f-464e-ab48-5093bbd5a0e4',
-                    branch: 'main',
-                    selector: 'div#search',
-                    detached:true
-                });
-            }}
-        />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+      <Script
+          src='https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js'
+          strategy="beforeInteractive"
+          onLoad={() => {
+            algoliasearchNetlify({
+              appId: 'PVXTT5VWPI',
+              apiKey: '3a89a9c31ea536f9ed2c2034f5f899c8',
+              siteId: '81d7b5da-7f5f-464e-ab48-5093bbd5a0e4',
+              branch: 'main',
+              selector: 'div#search',
+              detached:true
+            });
+          }}
+          strategy="lazyOnload"
+          onError={(e) => console.log(e)}
+      />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
 
       {/*<nav className="main-nav">*/}
       {/*  <ul>*/}

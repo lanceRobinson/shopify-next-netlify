@@ -3,7 +3,6 @@ import ProductListing from "@components/ProductListing";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { getProductList } from "@api/getProductList";
-import SiteMenu from "@components/SiteMenu";
 
 export default function Home({ products }) {
   return (
@@ -12,7 +11,6 @@ export default function Home({ products }) {
         <title>Life Fitness</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <SiteMenu/>
       <Header />
       <main>
         <ul className="product-grid">

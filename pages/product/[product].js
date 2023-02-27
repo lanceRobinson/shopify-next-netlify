@@ -12,7 +12,6 @@ export default function ProductPage({product}) {
                 <title>Shoperoni | Buy {product.node.title}</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <SiteMenu/>
             <Header/>
             <div className="product-page">
                 <article>
