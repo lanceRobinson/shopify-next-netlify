@@ -3,6 +3,7 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Cart from '@components/Cart';
 import { useAppContext } from '../state';
+import SiteMenu from "@components/SiteMenu";
 
 export default function CartPage() {
   return (
@@ -11,7 +12,7 @@ export default function CartPage() {
         <title>Shoperoni | Cart</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+        <SiteMenu/>
       <Header />
       <main className="cart-page">
         <article className="cart-page-content">

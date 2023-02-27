@@ -7,7 +7,6 @@ export default function Footer() {
             "SEE THE TRANSFORMATION OF SOME OF THE WORLD’S LEADING FITNESS FACILITIES."
           </h2>
           <h1>"EXPERIENCE. EXPERTISE. EXCELLENCE."</h1>
-          // <p>Paul Hotcakes</p>
         </section>
         <section className="app-footer-links">
           <ul>
