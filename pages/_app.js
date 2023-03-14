@@ -5,7 +5,6 @@ import SiteMenu from "@components/SiteMenu";
 export function Application({ Component, pageProps }) {
   return (
     <AppWrapper>
-        <SiteMenu/>
       <Component {...pageProps} />
     </AppWrapper>
   );

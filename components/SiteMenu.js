@@ -43,8 +43,8 @@ const MenuButtons = [
 ]
 const MenuButton = ({name, index}) => {
     return (
-        <Link href="/" key={'menu-button-link-'+name}>
-            <Button color="inherit" sx={classes.button} key={'menu-button-'+name}>{name}</Button>
+        <Link href="/" key={`menu-button-link-${index}`}>
+            <Button color="inherit" sx={classes.button} key={`menu-button-${index}`}>{name}</Button>
         </Link>
     )
 }
@@ -86,7 +86,7 @@ export default function SiteMenu() {
                         <img src="/logo.png" alt="logo" style={classes.logo}/>
                     </Link>
                     <ButtonGroup variant="text" aria-label="text button group" display="flex" color="inherit">
-                        {MenuButtons.map((button,index) => <MenuButton name={button} index={index}/>)}
+                        {MenuButtons.map((button,i) => <MenuButton name={button} index={i}/>)}
                     </ButtonGroup>
                     <ButtonGroup variant="text" color="inherit">
                             <div id={'search'} margin={'auto'}></div>

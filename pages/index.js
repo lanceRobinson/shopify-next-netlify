@@ -3,6 +3,7 @@ import ProductListing from "@components/ProductListing";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { getProductList } from "@api/getProductList";
+import SiteMenu from "@components/SiteMenu";
 
 export default function Home({ products }) {
   return (
@@ -12,6 +13,7 @@ export default function Home({ products }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+        <SiteMenu/>
       <main>
         <ul className="product-grid">
           {products.map((p, index) => {
